@@ -1,0 +1,210 @@
+.aboutMe__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin: 0;
+    padding-top: 110px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe__title{
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-top: 90px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutMe__title{
+        margin-left: 14px;
+        margin-right: 14px;
+        padding-top: 70px;
+    }
+}
+
+.aboutMe__titleLine {
+    margin: 0;
+    margin-top: 23px;
+    width: 100%;
+}
+
+@media screen and (max-width: 320px) {
+    .aboutMe__titleLine{
+        margin-top: 28px;
+    }
+}
+
+.aboutMe__box {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 66px;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe__box{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutMe__box{
+        margin-left: 14px;
+        margin-right: 14px;
+        margin-top: 60px;
+        flex-direction: column-reverse;
+    }
+}
+
+.aboutMe__info {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe__info{
+        width: 364px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutMe__info{
+        width: 292px;
+        margin-top: 40px;
+    }
+}
+
+.aboutMe__photo {
+    width: 270px;
+    height: 327px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe__photo{
+        width: 255px;
+        height: 307px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutMe__photo{
+        width: 292px;
+        height: 352px;
+    }
+}
+
+.aboutMe__name {
+    margin: 0%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 58px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe__name{
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutMe__name{
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+
+.aboutMe__education {
+    margin: 0%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    margin-top: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe__education{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutMe__education{
+        font-size: 11px;
+        line-height: 16px;
+    }
+}
+
+.aboutMe__about {
+    margin: 0%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    margin-top: 26px;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe__about{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutMe__about{
+        font-size: 11px;
+        line-height: 16px;
+    }
+}
+
+.aboutMe__git {
+    margin: 0%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-top: 99px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutMe__git{
+        margin-top: 87px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutMe__git{
+        margin-top: 40px;
+    }
+}

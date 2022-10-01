@@ -1,0 +1,129 @@
+.searchForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    margin-right: 70px;
+    margin-left: 70px;
+    padding-top: 80px;
+    padding-bottom: 94px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8B8B8B;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .searchForm{
+        flex-direction: column;
+        margin-right: 30px;
+        margin-left: 30px;
+        padding-bottom: 68px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .searchForm{
+        padding-bottom: 55px;
+    }
+}
+
+.searchForm__box {
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    border: 1.5px solid  #AAAAAA;
+    border-radius: 24px;
+    width: 100%;
+    margin-right: 41px;
+}
+
+.searchForm__switch-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .searchForm__switch-box{
+        margin-top: 38px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .searchForm__switch-box{
+        margin-top: 45px;
+    }
+}
+
+.searchForm__input {
+    background-color: #202020;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 22px;
+    border-radius: 48px;
+}
+
+.searchForm__search-button {
+    border-radius: 48px;
+    width: 80px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background-color: #4285F4;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 7px;
+    background-image: url(../../images/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+}
+
+.searchForm__switch-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchForm__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin: 0;
+    margin-right: 14px;
+}
+
+.searchForm__switch-button {
+    margin: 0%;
+    padding: 0%;
+    margin-top: 4px;
+    width: 36px;
+    height: 20px;
+    background-color: #202020;
+    background-image: url(../../images/smalltumb.svg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+}
+
+.searchForm__line {
+    margin: 0;
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-color: #424242;
+    position: absolute;
+    bottom: 10px;
+}

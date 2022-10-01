@@ -1,0 +1,121 @@
+.portfolio {
+    margin-bottom: 125px;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio{
+        margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio{
+        margin-bottom: 70px;
+    }
+}
+
+.portfolio__header {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #8B8B8B;
+    mix-blend-mode: normal;
+    margin-left: 70px;
+    margin-top: 101px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio__header{
+        margin-top: 91px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio__header{
+        margin-top: 70px;
+        margin-left: 14px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.portfolio__link {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin:0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 40px;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio__link{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio__link{
+        margin-left: 14px;
+        margin-right: 14px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+.portfolio__linkimg {
+    width: 29px;
+    height: 60px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio__linkimg{
+        width: 18px;
+        height: 28px;
+    }
+}
+
+.portfolio__link-text {
+    margin: 0%;
+}
+
+
+.portfolio__titleLine {
+    color: #DADADA;
+    margin: 0;
+    margin-top: 23px;
+}
+
+.portfolio__linkLine {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    bottom: -19px;
+    border: 0;
+    height: 1px;
+    background-color: #424242;
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio__linkLine{
+        background-color: #E6E6E6;
+    }
+}

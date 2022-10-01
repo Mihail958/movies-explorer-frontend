@@ -1,6 +1,5 @@
 import '../AboutMe/AboutMe.css';
 import photo from '../../images/photo.png';
-import linkimg from '../../images/linkimg.png';
 
 function AboutMe() {
     return (

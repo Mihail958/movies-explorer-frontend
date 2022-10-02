@@ -1,0 +1,94 @@
+.nav-popup {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+}
+
+.nav-popup__background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.nav-popup__container {
+    width: 520px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+@media screen and (max-width: 550px) {
+    .nav-popup__container{
+        width: 100%;
+    }
+}
+
+.nav-popup__close-button {
+    position: absolute;
+    top: 22.44px;
+    right: 22.44px;
+    width: 30px;
+    height: 30px;
+    background-color: #202020;
+    background-image: url(../../images/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+    border: none;
+    outline: none;
+}
+
+.nav-popup__link-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 131px;
+}
+
+.nav-popup__link {
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 28px;
+}
+
+.nav-popup__accountBox {
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50vh;
+    align-items: center;
+}
+
+.nav-popup__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin: 0;
+    margin-right: 16px;
+}

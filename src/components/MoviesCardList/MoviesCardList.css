@@ -86,7 +86,7 @@
     height: 30px;
     border-radius: 15px;
     background-color: #313131;
-    background-image: url(../../images/favourit.png);
+    background-image: url(../../images/favourit.svg);
     background-size: 10px 13px ;
     background-repeat: no-repeat;
     background-position: center;
@@ -100,7 +100,7 @@
 
 .moviesCardList__button-favourites-active {
     background-color: #3DDC84;
-    background-image: url(../../images/favourites-active.png);
+    background-image: url(../../images/favourites-active.svg);
 }
 
 .moviesCardList__card-img {

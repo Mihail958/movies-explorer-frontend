@@ -1,5 +1,5 @@
 import '../Movies/Movies.css';
-import NavBar from '../NavBar/NavBar';
+import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
@@ -7,9 +7,11 @@ import Footer from '../Footer/Footer';
 function SavedMovies() {
     return (
       <div className='movies'>
-        <NavBar />
-        <SearchForm />
-        <MoviesCardList />
+        <Header />
+        <main>
+          <SearchForm />
+          <MoviesCardList />
+        </main>
         <Footer />
       </div>
     );

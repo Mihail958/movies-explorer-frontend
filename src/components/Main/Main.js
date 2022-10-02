@@ -1,5 +1,5 @@
 import '../Main/Main.css';
-import NavTab from '../NavTab/NavTab';
+import MainHeader from '../MainHeader/MainHeader';
 import Promo from '../Promo/Promo';
 import AboutProject from '../AboutProject/AboutProject';
 import Techs from '../Techs/Techs';
@@ -11,12 +11,14 @@ import Footer from '../Footer/Footer';
 function Main() {
     return (
       <div>
-        <NavTab />
-        <Promo />
-        <AboutProject />
-        <Techs />
-        <AboutMe />
-        <Portfolio />
+        <MainHeader />
+        <main>
+          <Promo />
+          <AboutProject />
+          <Techs />
+          <AboutMe />
+          <Portfolio />
+        </main>
         <Footer />
       </div>
     );

@@ -22,7 +22,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .aboutMe__title{
         margin-left: 14px;
         margin-right: 14px;
@@ -36,7 +36,7 @@
     width: 100%;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .aboutMe__titleLine{
         margin-top: 28px;
     }
@@ -59,7 +59,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 570px) {
     .aboutMe__box{
         margin-left: 14px;
         margin-right: 14px;
@@ -81,16 +81,16 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .aboutMe__info{
-        width: 292px;
+        width: 100%;
         margin-top: 40px;
     }
 }
 
 .aboutMe__photo {
-    width: 270px;
-    height: 327px;
+    max-width: 270px;
+    max-height: 327px;
     object-fit: cover;
 }
 
@@ -101,7 +101,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .aboutMe__photo{
         width: 292px;
         height: 352px;
@@ -126,7 +126,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .aboutMe__name{
         font-size: 30px;
         line-height: 36px;
@@ -152,7 +152,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .aboutMe__education{
         font-size: 11px;
         line-height: 16px;
@@ -178,7 +178,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .aboutMe__about{
         font-size: 11px;
         line-height: 16px;
@@ -203,7 +203,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .aboutMe__git{
         margin-top: 40px;
     }

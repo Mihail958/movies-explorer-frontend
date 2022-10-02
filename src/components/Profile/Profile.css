@@ -38,7 +38,7 @@
     width: 410px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
     .profile__box-profile-info{
         margin-top: 80px;
         width: 260px;
@@ -75,7 +75,7 @@
 
 .profile__button-edit {
     margin: 0;
-    width: 410px;
+    max-width: 410px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 220px;
@@ -106,7 +106,7 @@
 
 .profile__button-exit {
     margin: 0;
-    width: 410px;
+    max-width: 410px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 16px;

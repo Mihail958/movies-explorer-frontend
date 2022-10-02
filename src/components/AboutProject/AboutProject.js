@@ -2,7 +2,7 @@ import '../AboutProject/AboutProject.css';
 
 function AboutProject() {
     return (
-        <div className='aboutProject'>
+        <section className='aboutProject'>
             <h2 className='aboutProject__title'>О проекте <hr className='aboutProject__line'/></h2>
             <div className='aboutProject__box'>
                 <div className='aboutProject__column'>
@@ -18,7 +18,7 @@ function AboutProject() {
                 <p className='aboutProject__firstweek'>1 неделя<p className='aboutProject__back-end'>Back-end</p></p>
                 <p className='aboutProject__4weeks'>4 недели<p className='aboutProject__front-end'>Front-end</p></p>
             </div>
-        </div>
+        </section>
     );
   }
 

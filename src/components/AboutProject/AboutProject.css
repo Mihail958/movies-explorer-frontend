@@ -25,7 +25,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__title{
         margin-top: 70px;
         margin-left: 18px;
@@ -42,7 +42,7 @@
     width: 100%;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__line{
         margin-top: 28px;
     }
@@ -65,7 +65,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__box{
         margin-right: 18px;
         margin-left: 18px;
@@ -86,7 +86,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__column{
        width: 284px;
        margin-top: 56px;
@@ -103,7 +103,7 @@
     margin: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__heading{
         font-size: 18px;
         line-height: 22px;
@@ -131,7 +131,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__text{
         margin-top: 16px;
         font-size: 11px;
@@ -160,7 +160,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__timeband{
         margin-right: 18px;
         margin-left: 18px;
@@ -186,7 +186,7 @@
     margin: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__firstweek{
         font-size: 11px;
         line-height: 13px;
@@ -209,7 +209,7 @@
     margin: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__4weeks{
         font-size: 11px;
         line-height: 13px;

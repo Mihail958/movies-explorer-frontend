@@ -1,9 +1,9 @@
-.nav {
+.main-header {
     display: flex;
     justify-content: space-between;
 }
 
-.nav__logo {
+.main-header__logo {
     width: 38px;
     height: 38px;
     margin-left: 70px;
@@ -12,18 +12,18 @@
 }
 
 @media screen and (max-width: 768px) {
-    .nav__logo{
+    .main-header__logo{
         margin-left: 30px;
     }
 }
 
-@media screen and (max-width: 320px) {
-    .nav__logo{
+@media screen and (max-width: 400px) {
+    .main-header__logo{
         margin-left: 14px;
     }
 }
 
-.nav__text{
+.main-header__text{
     display: flex;
     flex-direction: row;
     margin-right: 70px;
@@ -32,18 +32,18 @@
 
 
 @media screen and (max-width: 768px) {
-    .nav__text{
+    .main-header__text{
         margin-right: 30px;
     }
 }
 
-@media screen and (max-width: 320px) {
-    .nav__text{
+@media screen and (max-width: 400px) {
+    .main-header__text{
         margin-right: 14px;
     }
 }
 
-.nav__registration {
+.main-header__registration {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -54,15 +54,15 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 320px) {
-    .nav__registration{
+@media screen and (max-width: 400px) {
+    .main-header__registration{
         margin-right: 14px;
         font-size: 10px;
         line-height: 16px;
     }
 }
 
-.nav__enter {
+.main-header__enter {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -79,8 +79,8 @@
     color: #000000;
 }
 
-@media screen and (max-width: 320px) {
-    .nav__enter{
+@media screen and (max-width:400px) {
+    .main-header__enter{
         width: 54px;
         height: 26px;
         font-size: 10px;

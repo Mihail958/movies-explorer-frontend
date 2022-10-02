@@ -68,6 +68,13 @@
     outline: none;
     padding-left: 22px;
     border-radius: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8B8B8B;
+
 }
 
 .searchForm__search-button {
@@ -80,10 +87,10 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 7px;
-    background-image: url(../../images/search.png);
+    background-image: url(../../images/search.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 22px 22px;
+    background-size: 15px 15px;
 }
 
 .searchForm__switch-box {
@@ -110,12 +117,16 @@
     width: 36px;
     height: 20px;
     background-color: #202020;
-    background-image: url(../../images/smalltumb.svg);
+    background-image: url(../../images/smalltumboff.svg);
     background-size: cover ;
     background-repeat: no-repeat;
     background-position: center;
     border: none;
     outline: none;
+}
+
+.searchForm__switch-button-active {
+    background-image: url(../../images/smalltumb.svg);
 }
 
 .searchForm__line {

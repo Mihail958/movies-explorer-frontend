@@ -14,7 +14,7 @@ import film12 from '../../images/film12.png';
 
 function MoviesCardList() {
     return (
-        <div className='moviesCardList'>
+        <section className='moviesCardList'>
           <div className='moviesCardList__grid-container'>
             <div className='moviesCardList__card'>
               <div className='moviesCardList__box-heading'>
@@ -114,7 +114,7 @@ function MoviesCardList() {
             </div>
           </div>
           <button className='button moviesCardList__button-more'>Ещё</button>
-        </div>
+        </section>
     );
   }
 

@@ -8,10 +8,14 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .portfolio{
         margin-bottom: 70px;
     }
+}
+
+.portfolio__list {
+    list-style:none;
 }
 
 .portfolio__header {
@@ -35,7 +39,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .portfolio__header{
         margin-top: 70px;
         margin-left: 14px;
@@ -71,7 +75,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .portfolio__link{
         margin-left: 14px;
         margin-right: 14px;
@@ -86,7 +90,7 @@
     object-fit: contain;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .portfolio__linkimg{
         width: 18px;
         height: 28px;
@@ -114,7 +118,7 @@
     background-color: #424242;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .portfolio__linkLine{
         background-color: #E6E6E6;
     }

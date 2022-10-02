@@ -1,11 +1,12 @@
 import '../Profile/Profile.css';
-import NavBar from '../NavBar/NavBar';
+import Header from '../Header/Header';
 
 
 function Profile() {
     return (
       <div className='profile'>
-        <NavBar />
+        <Header />
+        <section>
         <p className='profile__greeting'>Привет, Виталий!</p>
         <div className='profile__box-profile-info'>
             <div className='profile__profile-info'>
@@ -20,6 +21,7 @@ function Profile() {
         </div>
         <button className='button profile__button-edit'>Редактировать</button>
         <button className='button profile__button-exit'>Выйти из аккаунта</button>
+        </section>
       </div>
     );
   }

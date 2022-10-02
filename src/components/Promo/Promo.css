@@ -30,7 +30,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 640px) {
     .promo__text{
         margin-left: auto;
         margin-right: auto;
@@ -56,8 +56,8 @@
 
 @media screen and (max-width: 768px) {
     .promo__logo{
-        width: 680px;
-        height: 230px;
+        max-width: 680px;
+        max-height: 230px;
         position: relative;
         margin-right: auto;
         margin-left: auto;
@@ -67,9 +67,16 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 680px) {
     .promo__logo{
-        width: 320px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .promo__logo{
+        width: 400px;
         height: 230px;
         object-fit: cover;
         position: relative;
@@ -88,7 +95,7 @@
     display: flex;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .promo__container{
         height: 330px;
     }

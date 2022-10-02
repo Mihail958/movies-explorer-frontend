@@ -1,3 +1,5 @@
 .movies {
     background-color: #202020;
+    position: relative;
+    z-index: 1;
 }

@@ -21,7 +21,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .footer__line{
         margin-left: 10px;
         margin-right: 10px;
@@ -40,7 +40,7 @@
     margin: 0%;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .footer__title{
         font-size: 12px;
         line-height: 15px;
@@ -65,7 +65,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .footer__box{
         flex-direction: column-reverse;
         margin-top: 30px;
@@ -82,7 +82,7 @@
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .footer__date{
         margin-top: 30px;
         color: #8B8B8B;
@@ -101,7 +101,7 @@
     margin-left: 20px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .footer__link{
         text-align: center;
         margin: 0;
@@ -109,7 +109,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .footer__linkBox{
         display: flex;
         flex-direction: column;

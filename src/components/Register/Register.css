@@ -17,7 +17,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .register__box-header{
         margin-top: 56px;
         width: 260px;
@@ -34,7 +34,7 @@
     margin: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .register__logo{
         margin-right: auto;
         margin-left: auto;
@@ -71,7 +71,7 @@
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .register__input{
         width: 260px;
         height: 46px;
@@ -93,7 +93,7 @@
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .register__input-header{
         width: 260px;
     }
@@ -119,7 +119,7 @@
     outline: none;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .register__button{
         width: 260px;
         margin-top: 179px;

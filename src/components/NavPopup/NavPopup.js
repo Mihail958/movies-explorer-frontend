@@ -2,12 +2,17 @@ import '../NavPopup/NavPopup.css';
 import { Link } from 'react-router-dom';
 import account from '../../images/account.svg';
 
-function NavPopup() {
+function NavPopup({isOpen, onClose}) {
     return (
-        <div className='nav-popup'>
+        <div 
+            className={`nav-popup ${isOpen && 'popup_visible'}`}
+        >
             <div className='nav-popup__background'/>
             <div className='nav-popup__container'>
-                <button className='button nav-popup__close-button' />
+                <button 
+                    className='button nav-popup__close-button' 
+                    onClick={onClose}
+                />
                 <div className='nav-popup__link-box'>
                     <Link to='/' className='link nav-popup__link'>Главная</Link>
                     <Link to='/movies' className='link nav-popup__link'>Фильмы</Link>

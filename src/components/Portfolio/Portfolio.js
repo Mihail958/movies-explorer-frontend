@@ -5,8 +5,8 @@ function Portfolio() {
     return (
         <section className='portfolio'>
             <ul className='portfolio__list'>
+                <h3 className='portfolio__header'>Портфолио</h3>
                 <li>
-                    <h3 className='portfolio__header'>Портфолио</h3>
                     <a className='link portfolio__link' href='https://mihail958.github.io/how-to-learn/' target="_blank">
                         <p className='portfolio__link-text'>Статичный сайт</p>
                         <img className='portfolio__linkimg' src={linkimg} alt='Стрелочка'/>

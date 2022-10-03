@@ -1,9 +1,10 @@
+import React from 'react';
 import '../Movies/Movies.css';
 import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
-import NavPopup from '../NavPopup/NavPopup';
+
 
 function Movies() {
     return (
@@ -14,7 +15,6 @@ function Movies() {
           <MoviesCardList />
         </main>
         <Footer />
-        <NavPopup />
       </div>
     );
   }

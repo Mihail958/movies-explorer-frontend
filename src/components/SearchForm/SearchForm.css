@@ -42,6 +42,10 @@
     margin-right: 41px;
 }
 
+.searchForm__box:hover {
+    border: 1.5px solid  #3DDC84;
+}
+
 .searchForm__switch-box {
     display: flex;
     flex-direction: row;

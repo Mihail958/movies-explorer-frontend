@@ -13,7 +13,7 @@ function Login() {
           <input className='login__input' type="email" />
           <p className='login__input-header'>Пароль</p>
           <input className='login__input' type="password" />
-          <button className='button login__button'>Войти</button>
+          <button className='button login__button' type='button'>Войти</button>
           <p className='login__text-link'>Ещё не зарегистрированы?<Link to='/signup'className='link login__link'>Регистрация</Link></p>
         </div>
     );

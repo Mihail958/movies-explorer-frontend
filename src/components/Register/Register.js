@@ -15,7 +15,7 @@ function Register() {
           <input className='register__input' type="email" />
           <p className='register__input-header'>Пароль</p>
           <input className='register__input' type="password" />
-          <button className='button register__button'>Зарегистрироваться</button>
+          <button className='button register__button' type='button'>Зарегистрироваться</button>
           <p className='register__text-link'>Уже зарегистрированы?<Link to='/signin'className='link register__link'>Войти</Link></p>
         </div>
     );

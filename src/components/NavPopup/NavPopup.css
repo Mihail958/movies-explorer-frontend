@@ -5,6 +5,8 @@
     left: 0;
     bottom: 0;
     visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .popup_visible{
@@ -25,7 +27,7 @@
 .nav-popup__container {
     width: 520px;
     height: 100vh;
-    position: absolute;
+    position: sticky;
     right: 0;
     top: 0;
     z-index: 2;

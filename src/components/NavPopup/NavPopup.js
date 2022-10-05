@@ -1,6 +1,6 @@
 import '../NavPopup/NavPopup.css';
 import { Link } from 'react-router-dom';
-import account from '../../images/account.svg';
+import account from '../../images/profile.svg';
 
 function NavPopup({isOpen, onClose}) {
     return (
@@ -12,6 +12,7 @@ function NavPopup({isOpen, onClose}) {
                 <button 
                     className='button nav-popup__close-button' 
                     onClick={onClose}
+                    type='button'
                 />
                 <div className='nav-popup__link-box'>
                     <Link to='/' className='link nav-popup__link'>Главная</Link>
@@ -19,8 +20,9 @@ function NavPopup({isOpen, onClose}) {
                     <Link to='/saved-movies' className='link nav-popup__link'>Сохранённые фильмы</Link>
                 </div>
                 <div className='nav-popup__accountBox'>
-                    <p className='nav-popup__text'>Аккаунт</p>
-                    <img className='nav-popup__account' src={account} alt='Лоотип' />
+                    <Link to='/profile'>
+                        <img className='link nav-popup__account' src={account} alt='Лоотип' />
+                    </Link>
                 </div>
             </div>
         </div>

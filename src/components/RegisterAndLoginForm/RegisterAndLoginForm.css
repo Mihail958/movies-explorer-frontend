@@ -1,10 +1,10 @@
-.register {
+.form {
     display: flex;
     flex-direction: column;
     height:100vh;
 }
 
-.register__box-header {
+.form__box-header {
     width: 396px;
     margin-right: auto;
     margin-left: auto;
@@ -12,13 +12,13 @@
 }
 
 @media screen and (max-width: 768px) {
-    .register__box-header{
+    .form__box-header{
         margin-top: 232px;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .register__box-header{
+    .form__box-header{
         margin-top: 56px;
         width: 260px;
         flex-direction: column;
@@ -28,20 +28,20 @@
     }
 }
 
-.register__logo {
+.form__logo {
     width: 38px;
     height: 38px;
     margin: 0;
 }
 
 @media screen and (max-width: 400px) {
-    .register__logo{
+    .form__logo{
         margin-right: auto;
         margin-left: auto;
     }
 }
 
-.register__header {
+.form__header {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -53,7 +53,7 @@
     margin-bottom: 20px;
 }
 
-.register__input {
+.form__input {
     width: 396px;
     height: 46px;
     background-color: #2F2F2F;
@@ -72,13 +72,13 @@
 }
 
 @media screen and (max-width: 400px) {
-    .register__input{
+    .form__input{
         width: 260px;
         height: 46px;
     }
 }
 
-.register__input-header {
+.form__input-header {
     width: 396px;
     font-family: 'Inter';
     font-style: normal;
@@ -94,12 +94,12 @@
 }
 
 @media screen and (max-width: 400px) {
-    .register__input-header{
+    .form__input-header{
         width: 260px;
     }
 }
 
-.register__button {
+.form__button {
     width: 396px;
     height: 45px;
     margin: 0;
@@ -119,20 +119,20 @@
     outline: none;
 }
 
-.register__button:disabled {
+.form__button:disabled {
     background-color: #F8F8F8;
     color: #C2C2C2;
     cursor: not-allowed;
   }
 
 @media screen and (max-width: 400px) {
-    .register__button{
+    .form__button{
         width: 260px;
         margin-top: 179px;
     }
 }
 
-.register__text-link {
+.form__text-link {
     margin: 0;
     margin-top: 16px;
     margin-left: auto;
@@ -147,9 +147,19 @@
     color: #8B8B8B;
 }
 
-.register__link {
+.form__link {
     color: #4285F4;
     margin: 0;
     margin-left: 6px;
     text-decoration: none;
+}
+
+.form__span-error {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    color: red;
+    font-size: 10px;
+    margin-right: auto;
+    margin-left: auto;
 }

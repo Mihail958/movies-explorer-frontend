@@ -1,34 +1,83 @@
-import React from 'react';
 import '../SearchForm/SearchForm.css';
+import React, { useState } from 'react';
+import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 
-function SearchForm() {
-     const [isSwitchButton, setIsSwitchButton] = React.useState(false);
+function SearchForm(props) {
+     
+     const [searchFilmValue, setSearchFilmValue] = useState(
+          props.valueSearch || ""
+        );
+        const [searchFilmError, setSearchFilmError] = useState(
+          "Нужно ввести ключевое слово"
+        );
+      
+        const [searchFilmDirty, setSearchFilmDirty] = useState(false);
 
-     function handleSwitchButtonClick () {
-          if (isSwitchButton === false) {
-               setIsSwitchButton(true);
+      
+        function handleChangeSearchFilm(e) {
+          e.preventDefault();
+          localStorage.setItem("moviesSearchValue", JSON.stringify(e.target.value));
+          setSearchFilmValue(JSON.parse(localStorage.getItem("moviesSearchValue")));
+      
+          if (!e.target.validity.valid && e.target.value.length === 0) {
+            setSearchFilmError("Нужно ввести ключевое слово");
           } else {
-               setIsSwitchButton(false);
+            setSearchFilmError("");
           }
-          
-      }
+        }
+      
+        function handleEnter(event) {
+          event.preventDefault();
+          props.enterHandler(searchFilmValue);
+        }
+      
+        function blurHandler(e) {
+          switch (e.target.name) {
+            case "searchmovie":
+              setSearchFilmDirty(true);
+              break;
+            default:
+              break;
+          }
+        }
      
     return (
-        <form className='searchForm'>
-           <div className='searchForm__box'>
-                <input className='searchForm__input' placeholder="Фильм"/>
-                <button className='button searchForm__search-button' type='button'/>
-           </div>
-           <div className='searchForm__switch-box'>
-                <p className='searchForm__text'>Короткометражки</p>
-                <button
-                    className={`button searchForm__switch-button ${isSwitchButton && 'searchForm__switch-button-active'}`}
-                    onClick={handleSwitchButtonClick}
-                    type='button'
-                />
-           </div>
-           <hr className='searchForm__line' />
-        </form>
+      <form className="searchForm">
+        <div className="searchForm__box">
+          <input
+            type="text"
+            id="movie"
+            className="searchForm__input"
+            placeholder="Фильм"
+            onChange={handleChangeSearchFilm}
+            value={searchFilmValue || ""}
+            onKeyUp={searchFilmValue ? null : handleEnter}
+            onBlur={blurHandler}
+            required
+          />
+          {searchFilmDirty && searchFilmError && (
+            <div className="">{searchFilmError}</div>
+          )}
+          <button
+            className="button searchForm__search-button"
+            type="submit"
+            onClick={handleEnter}
+          />
+        </div>
+        {props.pathMovies && (
+          <FilterCheckbox
+            checkShort={props.checkShortFilms}
+            onChecked={props.onCheckedFilms}
+          />
+        )}
+        {props.pathMoviesSave && (
+          <FilterCheckbox
+            checkShort={props.checkShortFilmsSave}
+            onChecked={props.onCheckedSaveFilms}
+          />
+        )}
+        <hr className="searchForm__line" />
+      </form>
     );
   }
 

@@ -7,10 +7,12 @@
     visibility: hidden;
     display: flex;
     justify-content: flex-end;
+    opacity: 0;
 }
 
 .popup_visible{
     visibility: visible;
+    opacity: 1;
 }
 
 .nav-popup__background {

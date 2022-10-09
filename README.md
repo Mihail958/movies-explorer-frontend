@@ -1,1 +1,1 @@
-ссылка на макет https://www.figma.com/file/sZXK8EiIfJE3xvD2HeG3og/DiplomMikhail
+ссылка на пул реквест https://github.com/Mihail958/movies-explorer-frontend/pull/4#issue-1402425221

@@ -69,7 +69,7 @@ class MainApi {
   }
   
   const mainApi = new MainApi({
-    address: "http://api.diploma.mikhail.nomoredomains.sbs",
+    address: "https://api.diploma.mikhail.nomoredomains.sbs",
   });
   
   export default mainApi;

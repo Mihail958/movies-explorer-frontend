@@ -1,4 +1,4 @@
-export const BASE_URL = "http://api.diploma.mikhail.nomoredomains.sbs";
+export const BASE_URL = "https://api.diploma.mikhail.nomoredomains.sbs";
 
 const HEADERS = {
   "Content-Type": "application/json",

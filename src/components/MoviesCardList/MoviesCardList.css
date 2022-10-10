@@ -70,3 +70,13 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.moviesCardList__not-found {
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 15px;
+    text-align: center;
+}

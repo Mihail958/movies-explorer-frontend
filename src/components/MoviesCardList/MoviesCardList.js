@@ -80,10 +80,10 @@ function MoviesCardList(props) {
         (pathSavedMovies &&
           props.saveMovies &&
           props.saveMovies.length === 0) ? (
-          <p className="movies-not-found">{notFilms}</p>
+          <p className="moviesCardList__not-found">{notFilms}</p>
         ) : null}
         {props.onChecked && props.shortMovies.length === 0 && (
-          <p className="movies-not-found">{notFilms}</p>
+          <p className="moviesCardList__not-found">{notFilms}</p>
         )}
       </div>
 

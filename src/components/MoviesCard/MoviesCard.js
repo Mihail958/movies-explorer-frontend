@@ -1,5 +1,6 @@
 import './MoviesCard.css';
 import React, { useCallback, useEffect, useState } from "react";
+import {HOUR} from '../../utils/constants';
 
 function MoviesCard(props) {
     const [isCardFavouritesClicked, setIsCardFavouritesClicked] = useState(true);
@@ -60,8 +61,8 @@ function MoviesCard(props) {
   }
 
   function getTimeFromMins(mins) {
-    let hours = Math.trunc(mins / 60);
-    let minutes = mins % 60;
+    let hours = Math.trunc(mins / HOUR);
+    let minutes = mins % HOUR;
     return hours + "ч " + minutes + "м";
   }
   const style = {

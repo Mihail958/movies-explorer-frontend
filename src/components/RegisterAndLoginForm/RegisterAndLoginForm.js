@@ -20,7 +20,7 @@ function RegisterAndLoginForm(props) {
       {props.children}
       <p className="form__text-link">
         {props.question}
-        <Link to="/signin" className="link form__link">
+        <Link to={props.rout} className="link form__link">
           {props.link}
         </Link>
       </p>

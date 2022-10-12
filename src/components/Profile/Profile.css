@@ -109,6 +109,11 @@
     color: #FFFFFF;
 }
 
+.profile__button-edit:disabled {
+    color: #EE3465;
+}
+
+
 @media screen and (max-width: 768px) {
     .profile__button-edit{
         margin-top: 210px;
@@ -149,6 +154,18 @@
 
 .profile__error {
     color: #EE3465;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.profile__success {
+    color: chartreuse;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;

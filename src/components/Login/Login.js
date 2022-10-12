@@ -16,6 +16,7 @@ function Login(props) {
 
     if (!validEmail) {
       setEmailError('Неверный формат почты');
+      props.setLoginMessage("");
     } else {
       setEmailError('');
     }
@@ -25,6 +26,7 @@ function Login(props) {
   function handleChangePassword(e) {
     if (e.target.value.length < 6) {
       setPasswordError('Пароль должен быть не менее 6 символов');
+      props.setLoginMessage("");
     } else {
       setPasswordError('');
     }
@@ -54,6 +56,7 @@ function Login(props) {
         title='Рады видеть!'
         question='Ещё не зарегистрированы?'
         link='Регистрация'
+        rout='/signup'
       >
       <p className='login__input-header'>E-mail</p>
       <input 
@@ -88,27 +91,14 @@ function Login(props) {
             className='button form__button'
             onClick={handleSubmit}
             disabled={!formValid}
-        >
+      >
             Войти
-        </button>
+      </button>
+      <span className='form__span-error'>
+        {props.isLoginMessage}
+      </span>
       </RegisterAndLoginForm> 
     );
   }
 
 export default Login;
-
-
-// return (
-//   <div className='login'>
-//     <div className='login__box-header'>
-//       <img className='login__logo' src={logo} alt='Лоотип'/>
-//       <p className='login__header'>Рады видеть!</p>
-//     </div>
-//     <p className='login__input-header'>E-mail</p>
-//     <input className='login__input' type="email" />
-//     <p className='login__input-header'>Пароль</p>
-//     <input className='login__input' type="password" />
-//     <button className='button login__button' type='button'>Войти</button>
-//     <p className='login__text-link'>Ещё не зарегистрированы?<Link to='/signup'className='link login__link'>Регистрация</Link></p>
-//   </div>
-// );

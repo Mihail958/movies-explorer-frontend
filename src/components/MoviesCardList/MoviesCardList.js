@@ -2,34 +2,39 @@ import '../MoviesCardList/MoviesCardList.css';
 import React, { useState } from 'react';
 import { useLocation } from "react-router-dom";
 import MoviesCard from '../MoviesCard/MoviesCard';
+import {
+    SCREEN_SIZE_1204,
+    SCREEN_SIZE_768,
+    SCREEN_SIZE_767,
+    DISPLAY_MOVIES_12,
+    DISPLAY_MOVIES_8,
+    DISPLAY_MOVIES_5,
+    ADD_MOVIES_3,
+    ADD_MOVIES_2
+} from '../../utils/constants';
 
 function MoviesCardList(props) {
   const location = useLocation();
   const pathSavedMovies = location.pathname === "/saved-movies";
   const pathMovies = location.pathname === "/movies";
   const notFilms = "Ничего не найдено";
-  const windowSizeMax = window.innerWidth >= 1280 && 12;
+  const windowSizeMax = window.innerWidth >= SCREEN_SIZE_1204 && DISPLAY_MOVIES_12;
   const windowSizeMiddle =
-    window.innerWidth <= 1280 && window.innerWidth >= 769 && 12;
-  const windowSizeMiddleAndMin =
-    window.innerWidth <= 768 && window.innerWidth >= 481 && 8;
-  const windowSizeMin = window.innerWidth <= 480 && 5;
+    window.innerWidth <= SCREEN_SIZE_1204 && window.innerWidth >= SCREEN_SIZE_768 && DISPLAY_MOVIES_8;
+  const windowSizeMin = window.innerWidth <= SCREEN_SIZE_767 && DISPLAY_MOVIES_5;
   const condition =
     windowSizeMax ||
     windowSizeMiddle ||
-    windowSizeMiddleAndMin ||
     windowSizeMin;
   const [countMovies, setCountMovies] = useState(condition);
 
   function loreMore() {
-    if (window.innerWidth >= 1280) {
-      setCountMovies(countMovies + 3);
-    } else if (window.innerWidth <= 1280 && window.innerWidth >= 769) {
-      setCountMovies(countMovies + 3);
-    } else if (window.innerWidth <= 768 && window.innerWidth >= 481) {
-      setCountMovies(countMovies + 2);
+    if (window.innerWidth > SCREEN_SIZE_1204) {
+      setCountMovies(countMovies + ADD_MOVIES_3);
+    } else if (window.innerWidth <= SCREEN_SIZE_1204) {
+      setCountMovies(countMovies + ADD_MOVIES_2);
     } else {
-      setCountMovies(countMovies + 2);
+      setCountMovies(countMovies + ADD_MOVIES_2);
     }
   }
 
@@ -89,7 +94,7 @@ function MoviesCardList(props) {
 
       {(!pathSavedMovies &&
         props.movies &&
-        props.movies.length < countMovies) || //изменение
+        props.movies.length < countMovies) || 
       pathSavedMovies ||
       props.onChecked ? null : (
         <button
@@ -104,24 +109,3 @@ function MoviesCardList(props) {
 }
 
 export default MoviesCardList;
-
-
-// function MoviesCardList({movies}) {
-//   return (
-//       <section className='moviesCardList'>
-//         <div className='moviesCardList__grid-container'>
-//           {movies.map((movie) => {
-//             return (
-//               <CardMovie
-//                 key={movie._id}
-//                 movie={movie}
-//               />
-//             );
-//           })}
-//         </div>
-//         <button className='button moviesCardList__button-more'>Ещё</button>
-//       </section>
-//   );
-// }
-
-// export default MoviesCardList;

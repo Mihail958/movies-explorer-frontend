@@ -14,6 +14,7 @@ function Profile(props) {
   const [nameProfile, setNameProfile] = useState("");
   const [emailProfile, setEmailProfile] = useState("");
   const [dataDirty, setDataDirty] = useState(false);
+  const [dataSuccess, setDataSuccess] = useState("")
   const [dataError, setDataError] = useState(
     "Что-то пошло не так. Имя не должно быть пустым или некорректный Email"
   );
@@ -42,6 +43,7 @@ function Profile(props) {
   function handleClickEdit(e) {
     e.preventDefault();
     setReadOnly(false);
+    setDataSuccess("");
   }
 
   function handleChangeName(e) {
@@ -53,11 +55,14 @@ function Profile(props) {
       setDataError(
         "Что-то пошло не так. Имя не должно быть пустым или некорректный Email"
       );
+      setDataSuccess("");
       if (!e.target.value) {
         setDataError("Имя не может быть пустым");
+        setDataSuccess("");
       }
     } else {
       setDataError("");
+      setDataSuccess("");
     }
   }
 
@@ -73,11 +78,14 @@ function Profile(props) {
       setDataError(
         "Что-то пошло не так. Имя не должно быть пустым или некорректный Email"
       );
+      setDataSuccess("");
       if (!e.target.value) {
         setDataError("Email не может быть пустым");
+        setDataSuccess("");
       }
     } else {
       setDataError("");
+      setDataSuccess("");
     }
   }
 
@@ -87,6 +95,7 @@ function Profile(props) {
       name: nameProfile,
       email: emailProfile,
     });
+    setDataSuccess("Профиль был успешно изменен");
     setReadOnly(true);
   }
 
@@ -149,7 +158,10 @@ function Profile(props) {
               />
             </div>
             {dataDirty && dataError && (
-              <div className="profile__error">{dataError}</div>
+              <div className='profile__error'>{dataError}</div>
+            )}
+            {dataDirty && dataSuccess && (
+              <div className='profile__success'>{dataSuccess}</div>
             )}
           </div>
           {!readOnly ? (

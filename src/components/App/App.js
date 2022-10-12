@@ -16,11 +16,14 @@ import * as auth from "../../utils/auth";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import moviesApi from "../../utils/MoviesApi";
 import BlockRouteUser from "../BlockRouteUser/BlockRouteUser";
+import {SHORT_FILM} from '../../utils/constants';
 
 function App() {
   const valueData = JSON.parse(localStorage.getItem("moviesSearchValue"));
   const location = useLocation();
   const history = useHistory();
+  const [isLoginMessage, setLoginMessage] = useState("");
+  const [isRegisterMessage, setRegisterMessage] = useState(false);
   const [currentUser, setCurrentUser] = useState([]);
   const [loggedIn, setLoggedIn] = useState(false);
   const [movies, setMovies] = useState([]);
@@ -51,6 +54,7 @@ function App() {
           localStorage.setItem("user", JSON.stringify(res));
         })
         .catch((err) => {
+          handleSignOut();
           console.log(err);
           localStorage.removeItem("token");
         });
@@ -74,9 +78,12 @@ function App() {
               (movie) => movie.owner === user._id
             );
             localStorage.setItem("saveMovies", JSON.stringify(userSaveMovie));
-            localStorage.setItem("movies", JSON.stringify(movies));
+            const before = movies.slice(0, 23);
+            const after = movies.slice(24);
+            const arrMovies = before.concat(after);
+            localStorage.setItem("allMovies", JSON.stringify(arrMovies));
             setSaveMovies(JSON.parse(localStorage.getItem("saveMovies")));
-            setMovies(JSON.parse(localStorage.getItem("movies")));
+            setMovies(JSON.parse(localStorage.getItem("allMovies")));
             setLoaded(false);
           })
           .catch((err) => {
@@ -191,9 +198,15 @@ function App() {
         if (res) {
           handleAuthorization(email, password);
           history.push("/movies");
+          setRegisterMessage("");
         }
       })
       .catch((err) => {
+        err.status !== 400
+          ? setRegisterMessage("Пользователь с таким email уже зарегистрирован")
+          : setRegisterMessage(
+              "При регистрации пользователя произошла ошибка."
+            );
         console.log(err);
       });
   }
@@ -212,12 +225,14 @@ function App() {
           );
           setLoggedIn(true);
           history.push("/movies");
+          setLoginMessage("");
         }
       })
       .then(() => {
         checkToken();
       })
       .catch((err) => {
+        setLoginMessage("Вы ввели неправильный логин или пароль.");
         console.log(err);
       });
   }
@@ -242,10 +257,10 @@ function App() {
     setTimeout(() => {
       if (!checkedFilms) {
         const durationMovieShort = movies.filter(
-          (movie) => movie.duration <= 40
+          (movie) => movie.duration <= SHORT_FILM
         );
         const durationMovieShortSearch = filterMovies.filter(
-          (movie) => movie.duration <= 40
+          (movie) => movie.duration <= SHORT_FILM
         );
         localStorage.setItem(
           "durationMovieShort",
@@ -315,7 +330,11 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <div className="app">
         <Switch>
-          <Route exact path="/" component={Main} />
+          <Route exact path="/">
+            <Main
+              loggedIn={loggedIn}
+            />
+          </Route>
           <ProtectedRoute
             path="/movies"
             component={Movies}
@@ -361,12 +380,16 @@ function App() {
             component={Login}
             handleAuthorization={handleAuthorization}
             loggedIn={loggedIn}
+            isLoginMessage={isLoginMessage}
+            setLoginMessage={setLoginMessage}
           />
           <BlockRouteUser
             path="/signup"
             component={Register}
             handleRegistration={handleRegistration}
             loggedIn={loggedIn}
+            isRegisterMessage={isRegisterMessage}
+            setRegisterMessage={setRegisterMessage}
           />
           <Route path="*" component={NotFound} />
         </Switch>

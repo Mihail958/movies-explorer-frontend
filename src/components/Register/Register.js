@@ -34,6 +34,7 @@ function Register(props) {
 
     if (!validEmail) {
       setEmailError('Неверный формат почты');
+      props.setRegisterMessage("");
     } else {
       setEmailError('');
     }
@@ -43,6 +44,7 @@ function Register(props) {
   function handleChangePassword(e) {
     if (e.target.value.length < 6) {
       setPasswordError('Пароль должен быть не менее 6 символов');
+      props.setRegisterMessage("");
     } else {
       setPasswordError('');
     }
@@ -74,6 +76,7 @@ function Register(props) {
         title='Добро пожаловать!'
         question='Уже зарегистрированы?'
         link='Войти'
+        rout='/signin'
       >
         <p className='register__input-header'>Имя</p>
       <input 
@@ -123,9 +126,12 @@ function Register(props) {
             className='button form__button'
             onClick={handleSubmit}
             disabled={!formValid}
-        >
+      >
             Зарегистрироваться
-        </button>
+      </button>
+      <span className='form__span-error'>
+        {props.isRegisterMessage}
+      </span>
       </RegisterAndLoginForm> 
     );
   }

@@ -16,9 +16,7 @@ function SearchForm(props) {
       
         function handleChangeSearchFilm(e) {
           e.preventDefault();
-          localStorage.setItem("moviesSearchValue", JSON.stringify(e.target.value));
-          setSearchFilmValue(JSON.parse(localStorage.getItem("moviesSearchValue")));
-      
+          setSearchFilmValue(e.target.value);
           if (!e.target.validity.valid && e.target.value.length === 0) {
             setSearchFilmError("Нужно ввести ключевое слово");
           } else {
@@ -56,7 +54,7 @@ function SearchForm(props) {
             required
           />
           {searchFilmDirty && searchFilmError && (
-            <div className="">{searchFilmError}</div>
+            <div className="searchForm__error">{searchFilmError}</div>
           )}
           <button
             className="button searchForm__search-button"

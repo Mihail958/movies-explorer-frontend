@@ -100,3 +100,14 @@
     position: absolute;
     bottom: 10px;
 }
+
+.searchForm__error {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    color: red;
+    font-size: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+}

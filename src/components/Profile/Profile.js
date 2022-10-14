@@ -15,9 +15,7 @@ function Profile(props) {
   const [emailProfile, setEmailProfile] = useState("");
   const [dataDirty, setDataDirty] = useState(false);
   const [dataSuccess, setDataSuccess] = useState("")
-  const [dataError, setDataError] = useState(
-    "Что-то пошло не так. Имя не должно быть пустым или некорректный Email"
-  );
+  const [dataError, setDataError] = useState("");
 
   const [formValid, setFormValid] = useState(false);
   const disabledBtn =
@@ -166,7 +164,7 @@ function Profile(props) {
           </div>
           {!readOnly ? (
             <button
-              className="button profile__button-edit"
+              className="button profile__button-edit profile__button-edit:disabled"
               disabled={!formValid || disabledBtn}
             >
               Сохранить

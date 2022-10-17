@@ -139,6 +139,21 @@ function App() {
     }, 450);
   }
 
+  // Поиск сохраненных фильмов
+  function handleSearchSaveMovie(search) {
+    const moviesSaveFilter = saveMovies
+      ? saveMovies.filter((movie) => {
+          return movie.nameRU.toLowerCase().includes(search.toLowerCase());
+        })
+      : [];
+    localStorage.setItem("isFilteredSave", JSON.stringify(true));
+    setTimeout(() => {
+      setLoaded(false);
+      setFilterSaveMovies(moviesSaveFilter);
+      setIsFilteredSave(JSON.parse(localStorage.getItem("isFilteredSave")));
+    }, 450);
+  }
+
   // Сохранение фильма
   function handleSaveMovie(movieData) {
     setSaveMovies([...saveMovies, movieData]);
@@ -154,21 +169,6 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }
-
-  // Поиск сохраненных фильмов
-  function handleSearchSaveMovie(search) {
-    const moviesSaveFilter = saveMovies
-      ? saveMovies.filter((movie) => {
-          return movie.nameRU.toLowerCase().includes(search.toLowerCase());
-        })
-      : [];
-    localStorage.setItem("isFilteredSave", JSON.stringify(true));
-    setTimeout(() => {
-      setLoaded(false);
-      setFilterSaveMovies(moviesSaveFilter);
-      setIsFilteredSave(JSON.parse(localStorage.getItem("isFilteredSave")));
-    }, 450);
   }
 
   // Функция удаления из избранного
@@ -286,11 +286,11 @@ function App() {
     setTimeout(() => {
       if (!checkedSaveFilms) {
         const durationMovieShortSave = saveMovies.filter(
-          (movie) => movie.duration <= 40
+          (movie) => movie.duration <= SHORT_FILM
         );
 
         const durationMovieShortSaveSearch = saveFilterSaveMovies.filter(
-          (movie) => movie.duration <= 40
+          (movie) => movie.duration <= SHORT_FILM
         );
 
         localStorage.setItem(
@@ -298,7 +298,7 @@ function App() {
           JSON.stringify(durationMovieShortSave)
         );
         localStorage.setItem(
-          "durationMovieShortSaveSearch",
+          "durationMovieShortSave",
           JSON.stringify(durationMovieShortSaveSearch)
         );
         setShortMoviesSave(

@@ -27,6 +27,7 @@ function SavedMovies(props) {
             shortMovies={props.shortMovies}
             onSaveMovie={props.handleSaveMovie}
             onChecked={props.onCheckedSaveFilms}
+            saveFilterSaveMovies={props.saveFilterSaveMovies}
         />
       )}
         </main>

@@ -42,7 +42,7 @@ function MoviesCardList(props) {
     <section className="moviesCardList">
       <div className="moviesCardList__grid-container">
         {props.onChecked
-          ? props.shortMovies === null ||
+          ? props.shortMovies === null  ||
             props.shortMovies.map((shortMovie) => {
               return (
                 <MoviesCard
@@ -79,17 +79,15 @@ function MoviesCardList(props) {
                   handleDeleteSaveMovie={props.handleDeleteSaveMovie}
                 />
               );
-            })}
+            })} 
 
         {(pathMovies && props.movies && props.movies.length === 0) ||
-        (pathSavedMovies &&
-          props.saveMovies &&
-          props.saveMovies.length === 0) ? (
+        (pathSavedMovies && props.saveMovies && props.saveMovies.length === 0) ? (
           <p className="moviesCardList__not-found">{notFilms}</p>
         ) : null}
-        {props.onChecked && props.shortMovies.length === 0 && (
+        {(props.onChecked && props.shortMovies.length === 0 ) ? (
           <p className="moviesCardList__not-found">{notFilms}</p>
-        )}
+        ) : null}
       </div>
 
       {(!pathSavedMovies &&

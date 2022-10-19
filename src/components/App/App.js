@@ -156,7 +156,6 @@ function App() {
 
   // Сохранение фильма
   function handleSaveMovie(movieData) {
-    setSaveMovies([...saveMovies, movieData]);
     mainApi
       .saveMovie(movieData)
       .then((newMovie) => {
@@ -288,7 +287,6 @@ function App() {
         const durationMovieShortSave = saveMovies.filter(
           (movie) => movie.duration <= SHORT_FILM
         );
-
         const durationMovieShortSaveSearch = saveFilterSaveMovies.filter(
           (movie) => movie.duration <= SHORT_FILM
         );
@@ -298,7 +296,7 @@ function App() {
           JSON.stringify(durationMovieShortSave)
         );
         localStorage.setItem(
-          "durationMovieShortSave",
+          "durationMovieShortSaveSearch",
           JSON.stringify(durationMovieShortSaveSearch)
         );
         setShortMoviesSave(

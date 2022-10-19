@@ -1,9 +1,8 @@
 import '../SearchForm/SearchForm.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 
 function SearchForm(props) {
-     
      const [searchFilmValue, setSearchFilmValue] = useState(
           props.valueSearch || ""
         );
@@ -66,12 +65,14 @@ function SearchForm(props) {
           <FilterCheckbox
             checkShort={props.checkShortFilms}
             onChecked={props.onCheckedFilms}
+            onClick={handleEnter}
           />
         )}
         {props.pathMoviesSave && (
           <FilterCheckbox
             checkShort={props.checkShortFilmsSave}
             onChecked={props.onCheckedSaveFilms}
+            onClick={handleEnter}
           />
         )}
         <hr className="searchForm__line" />

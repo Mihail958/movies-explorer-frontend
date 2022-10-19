@@ -8,7 +8,6 @@ import NavPopup from '../NavPopup/NavPopup';
 import { useLocation } from "react-router-dom";
 
 
-
 function Header() {
     const [isNavPopupOpen, setIsPopupOpen] = React.useState(false);
     const location = useLocation();

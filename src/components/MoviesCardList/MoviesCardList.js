@@ -41,7 +41,8 @@ function MoviesCardList(props) {
   return (
     <section className="moviesCardList">
       <div className="moviesCardList__grid-container">
-        {props.onChecked
+        {props.onChecked && ((pathMovies && props.movies && props.movies.length != 0) ||
+        (pathSavedMovies && props.saveMovies && props.saveMovies.length != 0))
           ? props.shortMovies === null  ||
             props.shortMovies.map((shortMovie) => {
               return (

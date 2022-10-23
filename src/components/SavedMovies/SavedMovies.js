@@ -15,6 +15,7 @@ function SavedMovies(props) {
             checkShortFilmsSave={props.checkShortFilmsSave}
             onCheckedSaveFilms={props.onCheckedSaveFilms}
             pathMoviesSave={props.pathMoviesSave}
+            setIsFilteredSaveReset={props.setIsFilteredSaveReset}
           />
           {props.loaded ? (
         <Preloader />
@@ -24,10 +25,12 @@ function SavedMovies(props) {
               props.isFilteredSave ? props.saveFilterSaveMovies : props.saveMovies
             }
             handleDeleteSaveMovie={props.handleDeleteSaveMovie}
-            shortMovies={props.shortMovies}
+            shortMovies={props.isFilteredSave  ? props.saveFilterSaveMovies : props.shortMovies}
             onSaveMovie={props.handleSaveMovie}
             onChecked={props.onCheckedSaveFilms}
             saveFilterSaveMovies={props.saveFilterSaveMovies}
+            isFilteredSave={props.isFilteredSave}
+            checkShortFilmsSave={props.checkShortFilmsSave}
         />
       )}
         </main>

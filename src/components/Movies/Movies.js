@@ -20,18 +20,20 @@ function Movies(props) {
             pathMovies={props.pathMovies}
             setIsFiltered={props.setIsFiltered}
             valueSearch={props.valueSearch}
+            setIsFilteredSaveReset={props.setIsFilteredSaveReset}
           />
           {props.loaded ? (
         <Preloader />
         ) : (
           <MoviesCardList
             movies={props.isFiltered ? props.filterMovies : props.movies}
-            shortMovies={props.shortMovies}
+            shortMovies={props.isFiltered ? props.filterMovies : props.shortMovies}
             onSaveMovie={props.handleSaveMovie}
             saveMovies={props.saveMovies}
             handleDeleteSaveMovie={props.handleDeleteSaveMovie}
             onChecked={props.onCheckedFilms}
             filterMovies={props.filterMovies}
+            isFiltered={props.isFiltered}
           />
         )}
         </main>

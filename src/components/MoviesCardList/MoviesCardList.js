@@ -37,7 +37,7 @@ function MoviesCardList(props) {
       setCountMovies(countMovies + ADD_MOVIES_2);
     }
   }
-
+ 
   return (
     <section className="moviesCardList">
       <div className="moviesCardList__grid-container">
@@ -53,6 +53,7 @@ function MoviesCardList(props) {
                   onSaveMovie={props.onSaveMovie}
                   saveMovies={props.saveMovies}
                   handleDeleteSaveMovie={props.handleDeleteSaveMovie}
+                  checkShort={props.checkShortFilmsSave}
                 />
               );
             })
@@ -65,6 +66,7 @@ function MoviesCardList(props) {
                   saveMovies={props.saveMovies}
                   pathSavedMovies={pathSavedMovies}
                   handleDeleteSaveMovie={props.handleDeleteSaveMovie}
+                  checkShort={props.checkShortFilmsSave}
                 />
               );
             })
@@ -78,6 +80,7 @@ function MoviesCardList(props) {
                   onSaveMovie={props.onSaveMovie}
                   saveMovies={props.saveMovies}
                   handleDeleteSaveMovie={props.handleDeleteSaveMovie}
+                  checkShort={props.checkShortFilmsSave}
                 />
               );
             })} 

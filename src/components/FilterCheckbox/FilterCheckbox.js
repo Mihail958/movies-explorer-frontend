@@ -3,6 +3,11 @@ import '../FilterCheckbox/FilterCheckbox.css'
 
 function FilterCheckbox(props) {
 
+  function twoCollback () {
+    props.checkShort();
+    props.setIsFilteredSaveReset();
+  }
+
   return (
     <div className="filter-checkbox__switch-box">
       <p className="filter-checkbox__text">Короткометражки</p>
@@ -12,7 +17,7 @@ function FilterCheckbox(props) {
         <input
           className="filter-checkbox__input"
           type="checkbox"
-          onChange={props.checkShort}
+          onChange={twoCollback}
           checked={props.onChecked}
         />
       </label>

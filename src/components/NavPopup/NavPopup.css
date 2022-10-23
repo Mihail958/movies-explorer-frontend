@@ -4,7 +4,15 @@
     top: 0;
     left: 0;
     bottom: 0;
-    display: none;
+    visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+}
+
+.popup_visible{
+    visibility: visible;
+    opacity: 1;
 }
 
 .nav-popup__background {
@@ -21,7 +29,7 @@
 .nav-popup__container {
     width: 520px;
     height: 100vh;
-    position: absolute;
+    position: sticky;
     right: 0;
     top: 0;
     z-index: 2;

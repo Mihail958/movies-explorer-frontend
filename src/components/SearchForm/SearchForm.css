@@ -26,9 +26,11 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
     .searchForm{
         padding-bottom: 55px;
+        margin-right: 10px;
+        margin-left: 10px;
     }
 }
 
@@ -40,24 +42,16 @@
     border-radius: 24px;
     width: 100%;
     margin-right: 41px;
+    position: relative;
 }
 
-.searchForm__switch-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-    .searchForm__switch-box{
-        margin-top: 38px;
-    }
+.searchForm__box:hover {
+    border: 1.5px solid  #3DDC84;
 }
 
 @media screen and (max-width: 320px) {
-    .searchForm__switch-box{
-        margin-top: 45px;
+    .searchForm__box{
+        margin: 0px;
     }
 }
 
@@ -77,6 +71,10 @@
 
 }
 
+.searchForm__input:focus {
+    background-color: #2F2F2F;
+}
+
 .searchForm__search-button {
     border-radius: 48px;
     width: 80px;
@@ -84,49 +82,13 @@
     border: none;
     outline: none;
     background-color: #4285F4;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 7px;
     background-image: url(../../images/search.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 15px 15px;
-}
-
-.searchForm__switch-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.searchForm__text {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    color: #FFFFFF;
-    margin: 0;
-    margin-right: 14px;
-}
-
-.searchForm__switch-button {
-    margin: 0%;
-    padding: 0%;
-    margin-top: 4px;
-    width: 36px;
-    height: 20px;
-    background-color: #202020;
-    background-image: url(../../images/smalltumboff.svg);
-    background-size: cover ;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    outline: none;
-}
-
-.searchForm__switch-button-active {
-    background-image: url(../../images/smalltumb.svg);
+    position: absolute;
+    right: 7px;
+    top: 7px;
 }
 
 .searchForm__line {
@@ -137,4 +99,15 @@
     background-color: #424242;
     position: absolute;
     bottom: 10px;
+}
+
+.searchForm__error {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    color: red;
+    font-size: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
 }

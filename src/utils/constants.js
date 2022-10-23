@@ -1,0 +1,27 @@
+const SCREEN_SIZE_1204 = 1204;
+const SCREEN_SIZE_768 = 768;
+const SCREEN_SIZE_767 = 767;
+
+const DISPLAY_MOVIES_12 = 12;
+const DISPLAY_MOVIES_8 = 8;
+const DISPLAY_MOVIES_5 = 5;
+
+const ADD_MOVIES_3 = 3;
+const ADD_MOVIES_2 = 2;
+
+const HOUR = 60;
+
+const SHORT_FILM = 40;
+
+export {
+    SCREEN_SIZE_1204,
+    SCREEN_SIZE_768,
+    SCREEN_SIZE_767,
+    DISPLAY_MOVIES_12,
+    DISPLAY_MOVIES_8,
+    DISPLAY_MOVIES_5,
+    ADD_MOVIES_3,
+    ADD_MOVIES_2,
+    HOUR,
+    SHORT_FILM
+};

@@ -78,6 +78,7 @@
     display: flex;
     flex-direction: column;
     width: 550px;
+    max-width: 48%;
 }
 
 @media screen and (max-width: 768px) {
@@ -90,6 +91,7 @@
     .aboutProject__column{
        width: 284px;
        margin-top: 56px;
+       max-width: 284px;
     }
 }
 
@@ -229,7 +231,7 @@
     bottom: -31px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__back-end{
         font-size: 11px;
         line-height: 13px;
@@ -250,7 +252,7 @@
     bottom: -31px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .aboutProject__front-end{
         font-size: 11px;
         line-height: 13px;

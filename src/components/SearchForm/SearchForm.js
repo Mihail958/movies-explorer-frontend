@@ -6,20 +6,13 @@ function SearchForm(props) {
      const [searchFilmValue, setSearchFilmValue] = useState(
           props.valueSearch || ""
         );
-        const [searchFilmError, setSearchFilmError] = useState(
-          "Нужно ввести ключевое слово"
-        );
       
-        const [searchFilmDirty, setSearchFilmDirty] = useState(false);
-
       
         function handleChangeSearchFilm(e) {
           e.preventDefault();
           setSearchFilmValue(e.target.value);
-          if (!e.target.validity.valid && e.target.value.length === 0) {
-            setSearchFilmError("Нужно ввести ключевое слово");
-          } else {
-            setSearchFilmError("");
+          if (e.target.value === "") {
+            props.enterHandler(searchFilmValue);
           }
         }
       
@@ -28,15 +21,7 @@ function SearchForm(props) {
           props.enterHandler(searchFilmValue);
         }
       
-        function blurHandler(e) {
-          switch (e.target.name) {
-            case "searchmovie":
-              setSearchFilmDirty(true);
-              break;
-            default:
-              break;
-          }
-        }
+        
      
     return (
       <form className="searchForm">
@@ -49,12 +34,8 @@ function SearchForm(props) {
             onChange={handleChangeSearchFilm}
             value={searchFilmValue || ""}
             onKeyUp={searchFilmValue ? null : handleEnter}
-            onBlur={blurHandler}
             required
           />
-          {searchFilmDirty && searchFilmError && (
-            <div className="searchForm__error">{searchFilmError}</div>
-          )}
           <button
             className="button searchForm__search-button"
             type="submit"
@@ -65,14 +46,16 @@ function SearchForm(props) {
           <FilterCheckbox
             checkShort={props.checkShortFilms} // функция переключения на короткометражки
             onChecked={props.onCheckedFilms} // состояние чекбокса
-            setIsFilteredSaveReset={props.setIsFilteredSaveReset} // функция поиска
+            onClick={handleEnter}
+            setIsFilteredSaveReset={props.setIsFilteredSaveReset}
           />
         )}
         {props.pathMoviesSave && (
           <FilterCheckbox
             checkShort={props.checkShortFilmsSave} // функция переключения на короткометражки
             onChecked={props.onCheckedSaveFilms} // состояние чекбокса
-            setIsFilteredSaveReset={props.setIsFilteredSaveReset} 
+            onClick={handleEnter}
+            setIsFilteredSaveReset={props.setIsFilteredSaveReset}
           />
         )}
         <hr className="searchForm__line" />

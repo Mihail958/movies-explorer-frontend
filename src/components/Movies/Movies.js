@@ -21,6 +21,7 @@ function Movies(props) {
             setIsFiltered={props.setIsFiltered}
             valueSearch={props.valueSearch}
             setIsFilteredSaveReset={props.setIsFilteredSaveReset}
+            isFiltered={props.isFiltered}
           />
           {props.loaded ? (
         <Preloader />

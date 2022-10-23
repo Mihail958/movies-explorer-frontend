@@ -108,6 +108,7 @@ function App() {
 
   useEffect(() => {
     setFilterMovies(JSON.parse(localStorage.getItem("moviesSearch")));
+    setFilterSaveMovies(JSON.parse(localStorage.getItem("saveMovies")));
   }, []);
 
   // Обновление короткометражек
@@ -138,6 +139,7 @@ function App() {
         );
       }, 450);
     } else {
+      setShortMovies(JSON.parse(localStorage.getItem("durationMovieShort")));
       const moviesFilter = shortMovies
       ?shortMovies.filter((movie) => {
           return movie.nameRU.toLowerCase().includes(search.toLowerCase());
@@ -173,6 +175,9 @@ function App() {
         setIsFilteredSave(JSON.parse(localStorage.getItem("isFilteredSave")));
       }, 450);
     } else {
+      setShortMoviesSave(
+        JSON.parse(localStorage.getItem("durationMovieShortSave"))
+      );
       const moviesSaveFilter = shortMoviesSave
       ? shortMoviesSave.filter((movie) => {
           return movie.nameRU.toLowerCase().includes(search.toLowerCase());
@@ -187,11 +192,12 @@ function App() {
     }
   }
 
-  // сброс значения  массива IsFilteredSave
+  // Сброс значения  массива IsFiltered и IsFilteredSave
   function setIsFilteredSaveReset() {
     setIsFilteredSave(false);
     setIsFiltered(false);
   }
+
 
   // Сохранение фильма
   function handleSaveMovie(movieData) {
@@ -206,6 +212,7 @@ function App() {
         setShortMoviesSave(JSON.parse(localStorage.getItem("saveMovies")).filter(
           (movie) => movie.duration <= SHORT_FILM
         ));
+        setFilterSaveMovies(JSON.parse(localStorage.getItem("saveMovies")));
       })
       .catch((err) => {
         console.log(err);
@@ -218,14 +225,16 @@ function App() {
       .deleteMovie(saveMovie._id || saveMovie.id)
       .then(() => {
         const newCardsArr = saveMovies.filter((c) => c._id !== saveMovie._id);
-        const newShotCarsArr = shortMoviesSave.filter((c) => c._id !== saveMovie._id);
+        const newShotCardsArr = shortMoviesSave.filter((c) => c._id !== saveMovie._id);
         const newSavedCardsArr = saveMovies.filter(
           (c) => c._id !== saveMovie._id
         );
         setSaveMovies(newCardsArr);
-        setShortMoviesSave(newShotCarsArr);
+        setShortMoviesSave(newShotCardsArr);
         setFilterSaveMovies(newSavedCardsArr);
+        setIsFilteredSave(false);
         localStorage.removeItem("saveMovies", JSON.stringify(newCardsArr));
+        localStorage.removeItem("shortMoviesSave", JSON.stringify(newShotCardsArr));
         localStorage.removeItem("saveMovies", JSON.stringify(newSavedCardsArr));
       })
       .catch((err) => {
@@ -313,7 +322,7 @@ function App() {
           "durationMovieShortSearch",
           JSON.stringify(durationMovieShortSearch)
         );
-        setShortMovies(JSON.parse(localStorage.getItem("durationMovieShort")));
+        setShortMovies(JSON.parse(localStorage.getItem("durationMovieShortSearch")));
       } else {
         setMovies(movies);
       }
@@ -344,8 +353,8 @@ function App() {
           JSON.stringify(durationMovieShortSaveSearch)
         );
         setShortMoviesSave(
-          JSON.parse(localStorage.getItem("durationMovieShortSave"))
-        );
+            JSON.parse(localStorage.getItem("durationMovieShortSaveSearch"))
+          );
       } else {
         setSaveMovies(saveMovies);
       }

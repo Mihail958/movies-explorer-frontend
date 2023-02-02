@@ -1,0 +1,116 @@
+.cardMovie__card {
+    width: 364px;
+    height: 271px;
+    background-color: #222222;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 1279px) {
+    .cardMovie__card{
+        width: 339px;
+        height: 258px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cardMovie__card{
+        width: 300px;
+        height: 236px;
+    }
+}
+
+.cardMovie__box-heading {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.cardMovie__heading {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    width: 280px;
+    height: 18px;
+    margin: 0;
+    margin-left: 14px;
+    margin-top: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardMovie__duration {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    color: #8B8B8B;
+    margin: 0;
+    margin-left: 14px;
+    margin-top: 9px;
+    margin-bottom: 14px;
+}
+
+.cardMovie__button-favourites {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #313131;
+    background-image: url(../../images/favourit.svg);
+    background-size: 10px 13px ;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin: 0;
+    position: absolute;
+    top: 19px;
+    right: 14px;
+}
+
+.cardMovie__button-favourites-active {
+    background-color: #3DDC84;
+    background-image: url(../../images/favourites-active.svg);
+}
+
+.cardMovie__delete {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #313131;
+    background-image: url(../../images/del.svg);
+    background-size: 10px 13px ;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin: 0;
+    position: absolute;
+    top: 19px;
+    right: 14px;
+}
+
+.cardMovie__card-img {
+    max-width: 364px;
+    max-height: 203px;
+}
+
+@media screen and (max-width: 1279px) {
+    .cardMovie__card-img{
+        max-width: 339px;
+        max-height: 190px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cardMovie__card-img{
+        max-width: 300px;
+        max-height: 168px;
+    }
+}

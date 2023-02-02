@@ -110,8 +110,8 @@
     margin: 0;
     margin-top: 100px;
     padding-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 50px;
+    margin-left: 50px;
     display: flex;
     justify-content: center;
 }
@@ -123,10 +123,12 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .techs__box{
         margin-top: 50px;
         padding-bottom: 70px;
+        margin-right: auto;
+        margin-left: auto;
         flex-wrap: wrap;
         width: 178px;
         justify-content: space-between;
@@ -161,7 +163,7 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .techs__container{
         margin-top: 10px;
         margin-right: 0;

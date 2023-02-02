@@ -119,6 +119,12 @@
     outline: none;
 }
 
+.register__button:disabled {
+    background-color: #F8F8F8;
+    color: #C2C2C2;
+    cursor: not-allowed;
+  }
+
 @media screen and (max-width: 400px) {
     .register__button{
         width: 260px;

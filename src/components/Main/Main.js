@@ -1,5 +1,7 @@
 import '../Main/Main.css';
+import React from "react";
 import MainHeader from '../MainHeader/MainHeader';
+import Header from '../Header/Header'
 import Promo from '../Promo/Promo';
 import AboutProject from '../AboutProject/AboutProject';
 import Techs from '../Techs/Techs';
@@ -8,10 +10,14 @@ import Portfolio from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 
 
-function Main() {
+function Main(props) {
     return (
-      <div>
-        <MainHeader />
+      <div className="main">
+        {props.loggedIn ? (
+          <Header className='them__olive'/>
+        ) : (
+          <MainHeader />
+        )}
         <main>
           <Promo />
           <AboutProject />

@@ -34,7 +34,7 @@ Movies Explorer - проект выполненный мной как дипло
 ## Установка и запуск проекта:
 Клонировать репозиторий:
 
-    git clone [https://github.com/ia-stepanov/movies-explorer-frontend.git](https://github.com/Mihail958/movies-explorer-frontend.git)
+    git clone https://github.com/Mihail958/movies-explorer-frontend.git
 
 Установить зависимости:
 
